@@ -3,7 +3,7 @@ import React from 'react'
 const Products = ({ productLinks }) => {
   return (
     <div className="row">
-      { productLinks && productLinks.map(({ price, image, description, rating, name }, index) =>
+      { productLinks && productLinks.map(({ price, image, description, name }, index) =>
         <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
                 <a href="#!"><img className="card-img-top" src={ image } alt="..." /></a>
@@ -12,7 +12,7 @@ const Products = ({ productLinks }) => {
                     <h5>{ price }</h5>
                     <p className="card-text">{ description }</p>
                 </div>
-                <div className="card-footer"><small className="text-muted">{ rating }</small></div>
+    
             </div>
         </div>
       )}
