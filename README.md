@@ -1,70 +1,73 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Showcase Furniture API
+> | Contents | |
+> |-----|-----|
+> | [About](https://github.com/EricHoward27/ecommerce-api#about-surveyus) | [Technologies Used](https://github.com/EricHoward27/ecommerce-api#technologies-employed) |
+> | [Routes](https://github.com/EricHoward27/ecommerce-api#catalogue-of-routes) | [Future Iterations](https://github.com/EricHoward27/ecommerce-api#future-iterations)|
+> | [ERD](https://github.com/EricHoward27/ecommerce-api#entity-relationship-diagram) | [Links](https://github.com/EricHoward27/ecommerce-api#links) |
+> | [Planning](https://github.com/EricHoward27/ecommerce-api#planning)| |
+>
+> ## About Showcase Furniture
+> The _Showcase Furniture_ API is the backend connection between the [_Showcase Furniture_](https://github.com/EricHoward27/ecommerce-client) client side and the [ExpressJS](https://www.expressjs.com/) database. This API utilizes multiple models: a User model, a Order Model, and a Product model. The _Showcase Furniture_ App will allow users to signup/signin and add, remove, edit items to the shopping cart. A user will be able to view their recent order history. The super user will be able to create, edit, and remove products from the admin panel. A super user will also be able to edit and remove users from the admin panel.
+> 
+> ## Catalogue of Routes
+>> ### Auth Routes
+>>> | HTTP Method | URL Path | Action | CRUD |
+>>> |--|--|--|--|
+>>> | POST | /sign-up | create | (C)reate |
+>>> | POST | /sign-in | create | (C)reate |
+>>> | DELETE | /sign-out | destroy | (D)elete |
+>>> | PATCH | /change-password | update | (U)pdate |
+>>>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+>> ### Order Routes 
+>>> | HTTP Method | URL Path | Action | CRUD |
+>>> |--|--|--|--|
+>>> | POST | /orders | create order | (C)reate |
+>>> | GET | /orders | index or list | (R)ead |
+>>> | GET | /orders/:id | show or retrieve | (R)ead |
+>>> | PATCH | /orders/:id | update | (U)pdate |
+>>> | DELETE | /orders/:id | destroy | (D)elete |
+>>>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+>> ### Product Routes 
+>>> | HTTP Method | URL Path | Action | CRUD |
+>>> |--|--|--|--|
+>>> | POST | /products | create products | (C)reate |
+>>> | GET | /products | index or list | (R)ead |
+>>> | GET | /products/:id | show or retrieve | (R)ead |
+>>> | PATCH | /products/:id | update | (U)pdate |
+>>> | DELETE | /products/:id | destroy | (D)elete |
+>>>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Entity Relationship Diagram
+> ![ERD](./docs/image/ecommerceerdupdate.png)
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Planning
+>> The planning was based on the project requirements and the entirely of this project is plan for future iterations/versions.[Project Requirements Checklist](https://docs.google.com/spreadsheets/d/1plXxLqck-l3Kkk6ihQ5J-0vHIq69jEb04SmZJktsVwo/edit#gid=0).
+>>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Technologies Employed
+>> | **General Development** | **[Client](https://github.com/EricHoward27/ecommerce-client) Development** | **[API](https://github.com/EricHoward27/ecommerce-api) Development** | **Deployment** |
+>> |---|---|---|---|
+>> | [GitHub](https://github.com/) | [React](https://reactjs.org/) | [MongoDB](https://www.mongodb.com/) | [GH Pages](https://pages.github.com/) |
+>> | [React-Bootstrap](https://react-bootstrap.github.io/) | [Postman](https://www.postman.com/) | [Heroku](https://www.heroku.com) |
+>> | [VS Code](https://code.visualstudio.com/) | [Semantic UI React](https://react.semantic-ui.com/) | [ExpressJS](https://www.expressjs.com/) | |
+>> | [GoogleSheets](https://docs.google.com/spreadsheets/d/1plXxLqck-l3Kkk6ihQ5J-0vHIq69jEb04SmZJktsVwo/edit#gid=0) | | | |
+>> | [Google](https://www.google.com/) | | | |
+>> | [MDN Web Docs](https://developer.mozilla.org/en-US/) | | | |
+>> | [JavaScript](https://www.javascript.com/) | | | |
+>> | [React-Stripe](https://stripe.com/docs/stripe-js/react) | | | |
+>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Wireframe
+> ![Wireframe](./docs/image/ecommercewireframe.png)
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Future Iterations
+> 
