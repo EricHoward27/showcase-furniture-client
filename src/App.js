@@ -1,8 +1,6 @@
 import './App.css';
 import { Route } from 'react-router-dom';
 import Header from './components/Header'
-import MastHead from './components/MastHead'
-import Products from './components/Products'
 import Footer from './components/Footer'
 // Import Screen components
 import HomeScreen from './screens/HomeScreen'
@@ -14,7 +12,6 @@ function App() {
     <div>
       <Header />
       <main className="container">
-        <MastHead />
         <Route path="/" component={HomeScreen} exact/>
         <Route path="/product/:id" component={ProductScreen} />
       </main>
