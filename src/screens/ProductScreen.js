@@ -7,51 +7,23 @@ const ProductScreen = (props) => {
     return <div> Product not found</div>
   }
   return (
-    <div>
-      <div className="row top">
-        <div className="col-2">
-          <img src={ product.image } alt={ product.name } />
-        </div>
-        <div className="col-1">
-          <ul>
-            <li>
-              <h1>{ product.name }</h1>
-            </li>
-            <li>
-              <Ratings ratings={ product.ratings } numReviews={ product.numReviews }/>
-            </li>
-            <li>Price: ${ product.price }</li>
-            <li>
-              Description:
-              <p>{ product.description }</p>
-            </li>
-          </ul>
-        </div>
-        <div className="col-1">
-          <div className="card card-body">
-            <ul>
-              <li>
-                <div className="row">
-                  <div>Price</div>
-                  <div className="price">${ product.price }</div>
-                </div>
-              </li>
-              <li>
-                <div className="row">
-                  <div>Status</div>
-                  <div>
-                    { product.countInStock > 0 ? ( <span className="success">In Stock</span> ) : ( <span className="error">Unavailable</span> ) }
-                  </div>
-                </div>
-              </li>
-              <li>
-                <button className="primary block">Add to Cart</button>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div className="container-flex">
+  <div className="card mb-3" style={{maxWidth:'800px'}}>
+    <div className="row no-gutters">
+    <div className="col-md-4">
+      <img src={product.image} className="card-img" alt={product.name} />
+    </div>
+    <div className="col-md-4">
+      <div className="card-body">
+        <h4 className="card-title">{product.name}</h4>
+        <p className="card-text">{product.description}</p>
+        <p className="card-text"><small className="text-muted"><Ratings ratings={product.ratings} numReviews={product.numReviews}/> </small></p>
+        <button className="btn btn-secondary">Start Your Order</button>
       </div>
     </div>
+  </div>
+</div>
+</div>
   )
 }
 export default ProductScreen
